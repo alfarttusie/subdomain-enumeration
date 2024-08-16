@@ -12,7 +12,7 @@
 - assetfinder
 - findomain
 
-# install 
+## install 
 ``` pip install -r requirements.txt ```
 ## How To use
 
