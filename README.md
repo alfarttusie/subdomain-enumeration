@@ -16,4 +16,4 @@
 ``` pip install -r requirements.txt ```
 ## How To use
 
-# subdomain.py -d example.com -t threads number
+# ``` subdomain.py -d example.com -t threads number ```
