@@ -6,7 +6,7 @@
 
 
 - amass
-- crtsh
+- https://crt.sh
 - subfinder
 - dnsgen
 - assetfinder
