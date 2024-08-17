@@ -2,6 +2,7 @@ import subprocess
 import os
 import requests
 import re
+import signal
 import concurrent.futures
 import argparse
 import pyfiglet
@@ -26,7 +27,7 @@ class subdomain:
     def args_handler(self):
         try:
             parser = argparse.ArgumentParser(description="subdomain finder")  # noQa
-            parser.add_argument('-d', '--domain name', required=True, help="website url")  # noQa
+            parser.add_argument('-d', '--domain', required=True, help="website url")  # noQa
             parser.add_argument('-t', '--threads', type=int, default=4, help="Number of threads (default: 4)")  # noQa
             args = parser.parse_args()
             self.url = args.domain
@@ -50,7 +51,7 @@ class subdomain:
         print(self.Logo)
         self.args_handler()
         print("running... amass")
-        # self.amass()
+        self.amass()
         print("running... crt.sh")
         self.crtsh()
         print("running... subfinder")
